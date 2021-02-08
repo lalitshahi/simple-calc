@@ -62,5 +62,25 @@
   {
     "value": "/",
     "number": false
+  },
+  {
+    "value": "+/-",
+    "number": false,
+    "scientificMode": true
+  },
+  {
+    "value": "x*x",
+    "number": false,
+    "scientificMode": true
+  },
+  {
+    "value": "√",
+    "number": false,
+    "scientificMode": true
+  },
+  {
+    "value": "",
+    "number": false,
+    "scientificMode": true
   }
 ]

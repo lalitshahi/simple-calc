@@ -38,3 +38,12 @@
   align-items: center;
   padding-right: 2rem;
 }
+
+.calc_toggler {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  width: 150px;
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+}

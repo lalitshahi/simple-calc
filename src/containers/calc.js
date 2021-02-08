@@ -9,7 +9,9 @@ class CalculatorContainer extends Component {
     result: "0",
     operator: null,
     operands: [],
+    scientificCalc: false,
   };
+
   renderCalcButtonRows = () => {
     const numPadChunks = chunk(numPads, 4);
     return map(numPadChunks, (numArray, index) => (
@@ -17,6 +19,7 @@ class CalculatorContainer extends Component {
         numArray={numArray}
         key={index}
         handleClick={this.handleNumButtonClick}
+        isScientificMode={this.state.scientificCalc}
       />
     ));
   };
@@ -75,6 +78,21 @@ class CalculatorContainer extends Component {
           operator: null,
           operands: [],
         });
+      } else if (value === "x*x") {
+        this.setState((state) => ({
+          operator: null,
+          result: Number(state.result) * Number(state.result),
+        }));
+      } else if (value === "+/-") {
+        this.setState((state) => ({
+          operator: null,
+          result: -Number(state.result),
+        }));
+      } else if (value === "√") {
+        this.setState((state) => ({
+          operator: null,
+          result: Math.sqrt(Number(state.result)),
+        }));
       } else {
         this.setState({
           operator: value,
@@ -82,16 +100,40 @@ class CalculatorContainer extends Component {
         });
       }
     }
+    if (!number && operands.length === 0) {
+      if (value === "x*x") {
+        this.setState((state) => ({
+          result: Number(state.result) * Number(state.result),
+        }));
+      } else if (value === "+/-") {
+        this.setState((state) => ({
+          result: -Number(state.result),
+        }));
+      } else if (value === "√") {
+        this.setState((state) => ({
+          operator: null,
+          result: Math.sqrt(Number(state.result)),
+        }));
+      }
+    }
   };
 
   handleClearOutput = () =>
     this.setState({ result: "0", operator: null, operands: [] });
+
+  handleCalcToggle = () =>
+    this.setState((state) => ({
+      scientificCalc: !state.scientificCalc,
+    }));
 
   render() {
     return (
       <div className="calc_container">
         <CalcOutputBar value={this.state.result} />
         {this.renderCalcButtonRows()}
+        <div className="calc_toggler" onClick={this.handleCalcToggle}>
+          Scientific Mode
+        </div>
       </div>
     );
   }
