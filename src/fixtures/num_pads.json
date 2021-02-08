@@ -1,82 +1,66 @@
 [
   {
     "value": 1,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": 2,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": 3,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": "+",
-    "number": false,
-    "operator": true
+    "number": false
   },
   {
     "value": 4,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": 5,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": 6,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": "-",
-    "number": false,
-    "operator": true
+    "number": false
   },
   {
     "value": 7,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": 8,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": 9,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": "*",
-    "number": false,
-    "operator": true
+    "number": false
   },
   {
     "value": "Clear",
-    "number": false,
-    "operator": true
+    "number": false
   },
   {
     "value": 0,
-    "number": true,
-    "operator": false
+    "number": true
   },
   {
     "value": "=",
-    "number": false,
-    "operator": true
+    "number": false
   },
   {
     "value": "/",
-    "number": false,
-    "operator": true
+    "number": false
   }
 ]

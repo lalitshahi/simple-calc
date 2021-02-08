@@ -1,7 +1,7 @@
 import React from "react";
 
-const CalcOutputBar = () => {
-  return <div className="calc_output_bar"></div>;
+const CalcOutputBar = ({ value }) => {
+  return <div className="calc_output_bar">{value}</div>;
 };
 
 export default CalcOutputBar;
