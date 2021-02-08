@@ -2,14 +2,14 @@ import React from "react";
 import CalcButton from "components/calc_button";
 import { map } from "lodash";
 
-const CalcButtonRow = ({ numArray }) => {
+const CalcButtonRow = ({ numArray, handleClick }) => {
   const renderRows = () =>
     map(numArray, (num) => (
       <CalcButton
         value={num.value}
         number={num.number}
-        operator={num.operator}
         key={num.value}
+        handleClick={handleClick}
       />
     ));
 
