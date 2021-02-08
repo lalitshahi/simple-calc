@@ -1,0 +1,82 @@
+[
+  {
+    "value": 1,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": 2,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": 3,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": "+",
+    "number": false,
+    "operator": true
+  },
+  {
+    "value": 4,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": 5,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": 6,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": "-",
+    "number": false,
+    "operator": true
+  },
+  {
+    "value": 7,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": 8,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": 9,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": "*",
+    "number": false,
+    "operator": true
+  },
+  {
+    "value": "Clear",
+    "number": false,
+    "operator": true
+  },
+  {
+    "value": 0,
+    "number": true,
+    "operator": false
+  },
+  {
+    "value": "=",
+    "number": false,
+    "operator": true
+  },
+  {
+    "value": "/",
+    "number": false,
+    "operator": true
+  }
+]
