@@ -3,6 +3,7 @@ import CalcButtonRow from "components/calc_button_row";
 import CalcOutputBar from "components/calc_output_bar";
 import numPads from "fixtures/num_pads.json";
 import { chunk, map } from "lodash";
+import { ThemeContext } from "../themes";
 
 class CalculatorContainer extends Component {
   state = {
@@ -126,13 +127,25 @@ class CalculatorContainer extends Component {
       scientificCalc: !state.scientificCalc,
     }));
 
+  static contextType = ThemeContext;
   render() {
+    let theme = this.context;
+
     return (
-      <div className="calc_container">
+      <div
+        className="calc_container"
+        style={{ backgroundColor: theme.foreground, color: theme.text }}
+      >
         <CalcOutputBar value={this.state.result} />
         {this.renderCalcButtonRows()}
-        <div className="calc_toggler" onClick={this.handleCalcToggle}>
-          Scientific Mode
+        <div className="toggle_buttons">
+          <div
+            className="button"
+            onClick={this.handleCalcToggle}
+            style={{ color: "#000" }}
+          >
+            Scientific Mode
+          </div>
         </div>
       </div>
     );
