@@ -1,7 +1,7 @@
 import React from "react";
 
-const CalcButton = () => {
-  return <div className="calc_button">1</div>;
+const CalcButton = ({ value, number, operator }) => {
+  return <div className="calc_button">{value}</div>;
 };
 
 export default CalcButton;
