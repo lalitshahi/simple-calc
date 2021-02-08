@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Simple Calc !
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple Calculator using React.js
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+Build the basic UI for the calculator, which has the following elements:
 
-### `yarn start`
+## Goal 1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. An area at the top to display the input or result
+2. 10 buttons for numbers 0-9
+3. 4 buttons for operations (Add, Subtract, Multiply & Divide)
+4. Clear button (completely clears the stack, akin to AC in a real calculator)
+5. = button (computes and displays the result)
+6. Operation buttons also compute and display intermediate results
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Functionality
 
-### `yarn test`
+Here’s an example of how it must function:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Default state must display ‘0’
+- Pressing the key [ ‘2’ ] shows the operand ‘2’
+- Pressing the keys [ ‘2’ ‘+’ ] in sequence continues to show operand ‘2’
+- Pressing the keys [ ‘2’ ‘+’ ‘3’ ] in sequence shows operand ‘3’
+- Pressing the keys [ ‘2’ ‘+’ ‘3’ ‘-’ ] in sequence shows intermediate result ‘5’
+- Pressing the keys [ ‘2’ ‘+’ ‘3’ ‘-’ ‘1’ ] in sequence shows operand ‘1’
+- Pressing the keys [ ‘2’ ‘+’ ‘3’ ‘-’ ‘1’ ‘*’ ] in sequence shows intermediate result ‘4’
+- Pressing the keys [ ‘2’ ‘+’ ‘3’ ‘-’ ‘1’ ‘*’ ‘10’ ] in sequence shows operand ‘10’
+- Pressing the keys [ ‘2’ ‘+’ ‘3’ ‘-’ ‘1’ ‘*’ ‘10’ ‘=’ ] in sequence shows result ‘40’
 
-### `yarn build`
+> **Note:** This is a simple calculator that **does not follow BODMAS**, and
+> simply evaluates the stack in order as the keys are pressed,
+> ie. 2 + 3 - 1 \* 10 = 40 and not -5.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Goal 2
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add a single button toggle for **Scientific Mode**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Scientific Mode
 
-### `yarn eject`
+This reveals 3 buttons:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Sign button (Flips the input from positive to negative, or vice versa)
+2. Square button (Finds the square of the input)
+3. Square Root button (Finds the square root of the input)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Goal 3
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Add a 2-button toggle between **Light Theme** and **Dark Theme**.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Light Theme Dark Theme
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In Light mode, the background color of the page should be white `(#fff)`. The background color of the calculator buttons should be gray `(#f0f0f0)` and the font color should be black `(#000)`.
+In Dark mode, the background color of the page should be black `(#000)`. The background color
+of the calculator buttons should be dark gray `(#666)` and the font color should be white `(#fff)`.
